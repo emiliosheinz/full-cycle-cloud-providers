@@ -22,3 +22,20 @@ For more information about Regions and Availability Zones, visit the [official w
 ### Local Zones
 
 AWS Local Zones are a type of infrastructure deployment that places select AWS services closer to your end users and workloads. They are ideal for use cases such as real-time gaming, hybrid migrations, and media & entertainment content creation that require single-digit millisecond latency for end-users in specific geographic areas. Unfortunatelly, Local Zones are not available in all regions and not all services are available in Local Zones.
+
+### Wavelength Zones
+
+AWS Wavelength brings AWS services to the edge of the 5G network, minimizing the latency to connect to an application from a mobile device. This allows developers to build applications that deliver single-digit millisecond latencies to mobile devices and end-users.
+
+### Identity and Access Management (IAM)
+
+AWS Identity and Access Management (IAM) enables you to manage access to AWS services and resources securely. Using IAM, you can create and manage AWS users and groups, and use permissions to allow and deny their access to specific AWS resources.
+
+- **User**: A person or service that interacts with AWS resources. 
+
+- **Group**: A collection of users under one set of permissionA set of permissions grouped together that you can apply to a user or group.s.
+
+- **Role**: Permissions that are linked to a specific service or function. Roles are used to delegate access to users, applications, or services that don't normally have access to AWS resources.
+
+- **Policy**: A policy is an object in AWS that, when associated with an identity or resource, defines their permissions. Policies are stored in AWS as JSON documents.
+
