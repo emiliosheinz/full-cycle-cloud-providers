@@ -39,3 +39,34 @@ AWS Identity and Access Management (IAM) enables you to manage access to AWS ser
 
 - **Policy**: A policy is an object in AWS that, when associated with an identity or resource, defines their permissions. Policies are stored in AWS as JSON documents.
 
+### Elastic Compute Cloud (EC2)
+
+Amazon EC2 is a web service provided by AWS that allows users to rent virtual servers, known as instances, to run applications on the cloud. EC2 offers scalable computing capacity, enabling users to easily scale up or down based on demand. It provides a variety of instance types optimized for different workloads, such as computing, memory, or storage-intensive tasks. EC2 also supports multiple operating systems and integrates with other AWS services, making it a flexible and powerful solution for deploying and managing applications in the cloud.
+
+### Virtual Private Cloud (VPC)
+
+Amazon Virtual Private Cloud (VPC) is a service that allows users to create a private, isolated section of the AWS cloud where they can launch resources, such as EC2 instances, within a virtual network. VPC provides control over the network configuration, including IP address ranges, subnets, route tables, and network gateways. Users can also create security groups and network access control lists to control inbound and outbound traffic to their instances. In other words, VPC enables users to build a secure and scalable environment in the cloud.
+
+#### Subnets
+
+A subnet is a range of IP addresses withing a VPC, used to segment and isolate network resources withi a cloud environment. Subnets can be public, private, or dedicated to a specific resource. A public subnet typically allows internet access via a route through an Internet Gateway (IGW), while a private subnet does not, restricting access to internal resources only. 
+
+#### Internet Gateway (IGW)
+
+An Internet Gateway (IGW) is a horizontally scaled, redundant, and highly available VPC component that allows communication between instances in a VPC and the internet. It provides a target in your VPC route tables for internet-routable traffic, and it performs network address translation (NAT) for instances that have been assigned public IPv4 addresses.
+
+#### Route Tables
+
+A route table contains a set of rules, called routes, that are used to determine where network traffic is directed. Each subnet in a VPC must be associated with a route table, which controls the routing for the subnet. The route table specifies how packets are forwarded between the subnet and the gateway, such as an Internet Gateway (IGW) or a Virtual Private Gateway (VGW).
+
+#### Bastion Host
+
+A Bastion Host is a hardened instance used to securely access resources in private subnets. It acts as a gateway, typically allowing SSH or RDP access while minimizing attack surfaces by restricting unnecessary services and limiting external exposure.
+
+#### NAT Gateway
+
+A NAT gateway is a managed network address translation (NAT) service that enables instances in a private subnet to connect to the internet or other AWS services, but prevents the internet from initiating a connection with those instances. It allows instances in a private subnet to access the internet while remaining private and secure.
+
+#### Security Groups
+
+A security group acts as a virtual firewall for your instance to control inbound and outbound traffic. When you launch an instance in a VPC, you can assign up to five security groups to the instance. Security groups act at the instance level, not the subnet level. Therefore, each instance in a subnet in your VPC can be assigned to a different set of security groups.
